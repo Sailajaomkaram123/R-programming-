@@ -1,0 +1,6 @@
+14. Write a R program to read the .csv file and display the content.  
+
+Program:-
+movie_data = read.csv(file="movies.csv", header=TRUE, sep=",")
+print("Content of the .csv file:")
+print(movie_data)
