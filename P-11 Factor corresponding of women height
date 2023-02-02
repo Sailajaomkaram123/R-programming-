@@ -1,0 +1,34 @@
+11. Write a R program to create a factor corresponding to height of women data set , which inbuild in R, contains height and 
+weights for a sample of women.
+
+PROGRAM:-
+data = women
+print("Women data set of height and weights:")
+print(data)
+height_f = cut(women$height,3)
+print("Factor corresponding to height:")
+print(table(height_f))
+
+OUTPUT:-
+[1] "Women data set of height and weights:"
+   height weight
+1      58    115
+2      59    117
+3      60    120
+4      61    123
+5      62    126
+6      63    129
+7      64    132
+8      65    135
+9      66    139
+10     67    142
+11     68    146
+12     69    150
+13     70    154
+14     71    159
+15     72    164
+[1] "Factor corresponding to height:"
+height_f
+  (58,62.7] (62.7,67.3]   (67.3,72] 
+          5           5
+
