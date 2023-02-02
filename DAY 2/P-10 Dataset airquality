@@ -1,0 +1,35 @@
+10. Write a R program to call the (built-in) dataset airquality. Check whether it is a data frame or not? Order the entire data frame by the first and second column. 
+ remove the variables 'Solar.R' and 'Wind' and display the data frame.
+
+PROGRAM:-
+data = airquality
+print("Original data: Daily air quality measurements in New York, May to September 1973.")
+print(class(data))
+print(head(data,10))
+result = data[order(data[,1]),]
+print("Order the entire data frame by the first and second column:")
+print(result)
+
+OUTPUT:-
+[1] "Original data: Daily air quality measurements in New York, May to September 1973."
+[1] "data.frame"
+   Ozone Solar.R Wind Temp Month Day
+1     41     190  7.4   67     5   1
+2     36     118  8.0   72     5   2
+3     12     149 12.6   74     5   3
+4     18     313 11.5   62     5   4
+5     NA      NA 14.3   56     5   5
+6     28      NA 14.9   66     5   6
+7     23     299  8.6   65     5   7
+8     19      99 13.8   59     5   8
+9      8      19 20.1   61     5   9
+10    NA     194  8.6   69     5  10
+[1] "Order the entire data frame by the first and second column:"
+    Ozone Solar.R Wind Temp Month Day
+21      1       8  9.7   59     5  21
+23      4      25  9.7   61     5  23
+18      6      78 18.4   57     5  18
+...........
+119    NA     153  5.7   88     8  27
+150    NA     145 13.2   77     9  27                         
+
