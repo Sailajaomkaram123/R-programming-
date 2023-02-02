@@ -1,0 +1,44 @@
+2. Write a R program to combine three arrays so that the first row of the first array is followed by the first row of the second array 
+and then first row of the third array. 
+
+PROGRAM:-
+num1 = rbind(rep("A",3), rep("B",3), rep("C",3))
+print("num1")
+print(num1)
+num2 = rbind(rep("P",3), rep("Q",3), rep("R",3))
+print("num2")
+print(num2)
+num3 = rbind(rep("X",3), rep("Y",3), rep("Z",3))
+print("num3")
+print(num3)
+a = matrix(t(cbind(num1,num2,num3)),ncol=3, byrow=T)
+print("Combine three arrays, taking one row from each one by one:")
+print(a)
+
+OUTPUT:-
+[1] "num1"
+     [,1] [,2] [,3]
+[1,] "A"  "A"  "A" 
+[2,] "B"  "B"  "B" 
+[3,] "C"  "C"  "C" 
+[1] "num2"
+     [,1] [,2] [,3]
+[1,] "P"  "P"  "P" 
+[2,] "Q"  "Q"  "Q" 
+[3,] "R"  "R"  "R" 
+[1] "num3"
+     [,1] [,2] [,3]
+[1,] "X"  "X"  "X" 
+[2,] "Y"  "Y"  "Y" 
+[3,] "Z"  "Z"  "Z" 
+[1] "Combine three arrays, taking one row from each one by one:"
+      [,1] [,2] [,3]
+ [1,] "A"  "A"  "A" 
+ [2,] "P"  "P"  "P" 
+ [3,] "X"  "X"  "X" 
+ [4,] "B"  "B"  "B" 
+ [5,] "Q"  "Q"  "Q" 
+ [6,] "Y"  "Y"  "Y" 
+ [7,] "C"  "C"  "C" 
+ [8,] "R"  "R"  "R" 
+ [9,] "Z"  "Z"  "Z"
