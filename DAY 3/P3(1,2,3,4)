@@ -1,0 +1,23 @@
+3.Use ggplot package to plot below EDA questions label the plot accordingly
+
+PROGRAM:-
+
+library(ggplot2)
+data=mtcars
+
+# (i) weight vs displacement scatter plot factor by Engine Shape
+ggplot (data, aes(x=disp, y=wt, color=vs)) + 
+  geom_point() + ggtitle("Weight vs Displacement by Engine Shape")
+
+# (ii) horsepower vs mileage scatter plot factor by Engine Shape
+ggplot(data, aes(x=mpg, y=hp, color=vs)) + 
+  geom_point() + ggtitle("Mileage vs Horsepower by Engine Shape")
+
+# (iii) horsepower vs mileage scatter plot factor by Cylinder Size
+ggplot(data, aes(x=mpg, y=hp, color=cyl)) + 
+  geom_point() + ggtitle("Mileage vs Horsepower by Cylinder Size")
+
+# (iv) histogram plot of horsepower with bin-width of 5
+ggplot(data, aes(x=hp)) + 
+  geom_histogram(binwidth=5) + 
+  ggtitle("Horsepower Histogram with Bin Width of 5")
