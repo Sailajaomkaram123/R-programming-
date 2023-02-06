@@ -1,0 +1,14 @@
+1)a<-iris
+sum(is.na(a))
+a<-a[1:100,]
+set.seed(100)
+s<-sample(1:100,80)
+irt<-a[s,]
+irc<-a[-s,]
+y<-irt$Species; x<-irt$Sepal.Length
+giit<-glm(y~x,family='binomial')
+summary(giit)
+nd<-data.frame(x=irc$Sepal.Length)
+pv<-predict(giit,nd,type = "response")
+prediction<-data.frame(irc$Sepal.Length,irc$Species,pv)
+prediction
