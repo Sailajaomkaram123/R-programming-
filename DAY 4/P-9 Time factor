@@ -1,0 +1,14 @@
+9)
+9.1
+model=lm(weight ~ Time+factor(Diet),dat=ChickWeight)
+summary(model)
+
+9.2
+L
+ndata=data.frame(Time = 10,Diet=1)
+prediction=predict(model,newdata = ndata)
+prediction
+
+9.3
+error=data[data$Time==10&data$Diet==1,"weight"] - prediction
+error
