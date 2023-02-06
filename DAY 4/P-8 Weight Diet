@@ -1,0 +1,7 @@
+8)
+d=ChickWeight
+library(dplyr)
+d%>%
+group_by(Diet)%>%
+  arrange(weight)
+boxplot(d)
