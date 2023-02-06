@@ -1,0 +1,2 @@
+3)
+airquality[, !(names(airquality) %in% c("Temp","Wind"))]
