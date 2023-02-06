@@ -1,0 +1,21 @@
+4)
+i)
+n <- nrow(airquality)    
+temp_sum<- sum(airquality$Temp)
+mean_temp<- temp_sum/n
+mean_temp
+
+ii)
+first_five_rows<- airquality[1:5,]
+first_five_rows
+
+iii)
+airquality[, !(names(airquality) %in% c("Temp","Wind"))]
+
+iv)
+coldest_day<- which.min(airquality$Temp)
+airquality[coldest_day,]
+
+v)
+windy_days<- sum(airquality$Wind> 17)
+windy_days
