@@ -1,0 +1,18 @@
+10)
+1)
+library(ggplot2)
+a<-data.frame(Titanic)
+ggplot(a, aes(x = Survived)) +
+geom_bar(width=0.5, fill = "coral") 
+
+2)
+library(ggplot2)
+a<-data.frame(Titanic)
+ggplot(a, aes(x = Survived,fill=sex)) +
+geom_bar(width=0.5, fill = "coral") 
+
+3)
+library(ggplot2)
+a<-data.frame(Titanic)
+ggplot(a, aes(x = Age)) +
+geom_bar(width=0.5, fill = "coral")
